@@ -3,6 +3,61 @@ media:
   output: /media
 
 content:
+  # HOMEPAGE
+  - name: homepage
+    label: Homepage HTML
+    type: file
+    path: index.html
+    format: code
+    options:
+      language: html
+
+  # ABOUT PAGE
+  - name: about
+    label: About Page HTML
+    type: file
+    path: about.html
+    format: code
+    options:
+      language: html
+
+  # COURSES PAGE
+  - name: courses
+    label: Courses Page HTML
+    type: file
+    path: courses.html
+    format: code
+    options:
+      language: html
+
+  # BLOG LISTING PAGE
+  - name: blog_page
+    label: Blog Listing HTML
+    type: file
+    path: blog.html
+    format: code
+    options:
+      language: html
+
+  # FREE RESOURCES PAGE
+  - name: resources
+    label: Resources Page HTML
+    type: file
+    path: resources.html
+    format: code
+    options:
+      language: html
+
+  # CONTACT PAGE
+  - name: contact
+    label: Contact Page HTML
+    type: file
+    path: contact.html
+    format: code
+    options:
+      language: html
+
+  # BLOG POSTS
   - name: blog
     label: Blog Posts
     type: collection
@@ -32,25 +87,23 @@ content:
         label: URL Slug
         type: string
         required: true
+        pattern: "^[a-z0-9-]+$"
         description: Use lowercase words separated by hyphens.
 
       - name: description
         label: Short Description
         type: text
         required: true
-        description: A short summary displayed with your blog post.
 
       - name: seo_title
         label: SEO Title
         type: string
         required: true
-        description: The title you want search engines to display.
 
       - name: seo_description
         label: SEO Meta Description
         type: text
         required: true
-        description: Write a unique description for search engine results.
 
       - name: date
         label: Publication Date
@@ -60,7 +113,6 @@ content:
       - name: author
         label: Author
         type: string
-        default: ContentCraft Academy
 
       - name: category
         label: Category
